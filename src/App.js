@@ -30,6 +30,7 @@ function App() {
           />
         </form>
         <DownloadButton id={id} type="mp3"/>
+        <DownloadButton id={id} type="videos"/>
       </div>
     </div>
   );

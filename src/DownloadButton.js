@@ -5,7 +5,7 @@ function DownloadButton({id, type}) {
     <div>
       <iframe
         className="button-api-frame"
-        src={`https://www.yt-download.org/api/button/mp3/${id}`}
+        src={`https://www.yt-download.org/api/button/${type}/${id}`}
       >
       </iframe>
     </div>
