@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import DownloadButton from "./DownloadButton";
-import LoadingSpinner from "./LoadingSpinner";
 
 function App() {
   const [videoUrl, setVideoUrl] = useState("");
   const [id, setId] = useState("");
-  const [loading, setLoanding] = useState(false);
 
   useEffect(() => {
     const id = videoUrl.replace("https://www.youtube.com/watch?v=", "");
     setId(id);
   }, [videoUrl]);
-
+  
   return (
     <div className="App">
       <div className="title">
@@ -30,14 +28,11 @@ function App() {
             placeholder="Paste your youtube url here..."
           />
         </form>
-            {loading ? (
-          <LoadingSpinner />
-        ) : (
-          <div>
-            <DownloadButton id={id} type="mp3" />
+        <div className="buttons-box">
+          <p>Wait a few seconds after placing your link</p>
+           <DownloadButton id={id} type="mp3" />
             <DownloadButton id={id} type="videos" />
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
