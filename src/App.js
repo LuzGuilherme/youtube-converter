@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import DownloadButton from "./DownloadButton";
+import YoutubeEmbed from "./YoutubeVideo";
 
 function App() {
   const [videoUrl, setVideoUrl] = useState("");
@@ -33,6 +34,7 @@ function App() {
            <DownloadButton id={id} type="mp3" />
             <DownloadButton id={id} type="videos" />
         </div>
+        <YoutubeEmbed embedId={videoUrl}/>
       </div>
     </div>
   );

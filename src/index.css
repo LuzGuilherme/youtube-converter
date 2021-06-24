@@ -44,3 +44,21 @@ input{
     height:100%;
     border:none;
 }
+
+.video-responsive {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    text-align: center;
+  }
+  
+  .video-responsive iframe {
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+
+  }
